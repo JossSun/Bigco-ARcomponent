@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class spin1 : MonoBehaviour {
     public float speed = 10f;
-    private Vector3 origin = new Vector3 (0.0f, 0.33f, 0.0f);
+    public GameObject earth;
+    public GameObject cloud1;
+    public GameObject cloud2;
+    public GameObject cloud3;
+    public GameObject cloud4;
+
 
     // Use this for initialization
     void Start () {
@@ -13,6 +18,9 @@ public class spin1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.RotateAround(Vector3.zero, Vector3.up, 20 * Time.deltaTime);
+        cloud1.transform.RotateAround(earth.transform.position, earth.transform.up, 7 * Time.deltaTime);
+        cloud2.transform.RotateAround(earth.transform.position, earth.transform.up, 5 * Time.deltaTime);
+        cloud3.transform.RotateAround(earth.transform.position, earth.transform.up, 2 * Time.deltaTime);
+        cloud4.transform.RotateAround(earth.transform.position, earth.transform.up, 5 * Time.deltaTime);
     }
 }
